@@ -3,6 +3,7 @@
 A simple and interactive web-based visualizer for common Data Structures and Algorithms concepts. This project helps users understand how sorting and searching algorithms work step by step using animated array bars.
 
 ![DSA Visualizer Dashboard Preview](image.png)
+![DSA Visualizer Dashboard Preview](image2.png)
 
 ## Features
 
