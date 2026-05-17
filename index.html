@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSA Visualizer Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>DSA Visualizer Dashboard</h1>
+
+    <div class="top-actions">
+        <button id="generate">Generate Array</button>
+        <button id="showSorting" class="active">Sorting Algorithms</button>
+        <button id="showSearching">Searching Algorithms</button>
+    </div>
+
+    <div class="algorithm-panel" id="sortingPanel">
+        <button id="bubbleSort">Bubble Sort</button>
+        <button id="selectionSort">Selection Sort</button>
+        <button id="insertionSort">Insertion Sort</button>
+        <button id="mergeSort">Merge Sort</button>
+        <button id="quickSort">Quick Sort</button>
+    </div>
+
+    <div class="algorithm-panel hidden" id="searchingPanel">
+        <button id="linearSearch">Linear Search</button>
+        <button id="binarySearch">Binary Search</button>
+        <button id="jumpSearch">Jump Search</button>
+    </div>
+
+    <div class="runtime-controls">
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="resumeBtn" disabled>Resume</button>
+        <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <div class="controls">
+        <label for="speed" id="speedValue">Speed: 80 ms</label>
+
+        <input type="range"
+        id="speed"
+        min="10"
+        max="300"
+        value="80">
+
+        <label for="target">Search Target:</label>
+        <input type="number" id="target" min="20" max="320" value="120">
+        <button id="randomTarget">Random Target</button>
+    </div>
+
+    <div class="info">
+
+        <h2 id="algoName">Bubble Sort</h2>
+
+        <ul id="algoPoints">
+            <li>Compare adjacent elements</li>
+            <li>Swap if left element is bigger</li>
+            <li>Largest element moves to end</li>
+            <li>Repeat until sorted</li>
+        </ul>
+
+        <p id="complexity">
+            Time Complexity: O(n^2)
+        </p>
+
+    </div>
+
+    <h3 id="stepText">
+        Waiting to start...
+    </h3>
+
+    <div class="container"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

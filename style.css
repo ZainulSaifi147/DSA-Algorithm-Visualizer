@@ -1,0 +1,207 @@
+body{
+    background:#111;
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.top-actions,
+.algorithm-panel,
+.runtime-controls,
+.controls{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:16px auto;
+}
+
+.algorithm-panel{
+    width:90%;
+    border:2px solid #333;
+    border-radius:8px;
+    padding:14px;
+    background:#181818;
+}
+
+.hidden{
+    display:none;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#dfffff;
+    color:#008b8b;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover:not(:disabled){
+    background:white;
+    transform:scale(1.05);
+}
+
+button:disabled{
+    opacity:0.55;
+    cursor:not-allowed;
+    transform:none;
+}
+
+button.active{
+    background:cyan;
+    color:#111;
+}
+
+.runtime-controls button{
+    min-width:110px;
+}
+
+#pauseBtn{
+    background:#ffe08a;
+    color:#5a3b00;
+}
+
+#resumeBtn{
+    background:#b9f6c2;
+    color:#10551c;
+}
+
+#stopBtn{
+    background:#ffb3b3;
+    color:#6b0000;
+}
+
+#speedValue,
+.controls label{
+    font-size:20px;
+    font-weight:bold;
+}
+
+#speed{
+    width:220px;
+}
+
+#target{
+    width:90px;
+    padding:10px;
+    border:2px solid cyan;
+    border-radius:6px;
+    font-size:18px;
+    text-align:center;
+}
+
+.info{
+    width:80%;
+    margin:20px auto;
+    border:3px solid cyan;
+    border-radius:8px;
+    padding:20px;
+    text-align:left;
+    background:#1a1a1a;
+    box-shadow:0 0 15px cyan;
+}
+
+.info h2{
+    color:cyan;
+    font-size:28px;
+}
+
+.info ul{
+    font-size:18px;
+    line-height:1.8;
+}
+
+#complexity{
+    color:lime;
+    font-size:20px;
+    font-weight:bold;
+}
+
+#stepText{
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.container{
+    width:90%;
+    height:320px;
+    margin:20px auto;
+    border:3px solid white;
+    background:#111;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:2px;
+    overflow:hidden;
+    padding:10px;
+}
+
+.bar{
+    width:18px;
+    margin:0 1px;
+    background:cyan;
+    border-radius:3px;
+    transition:
+    height 0.2s linear,
+    background 0.2s linear;
+}
+
+@media(max-width:768px){
+    body{
+        padding:12px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .algorithm-panel,
+    .info,
+    .container{
+        width:95%;
+    }
+
+    .info h2{
+        font-size:26px;
+    }
+
+    .info ul{
+        font-size:17px;
+    }
+
+    #complexity{
+        font-size:20px;
+    }
+
+    #stepText{
+        font-size:24px;
+    }
+
+    .bar{
+        width:8px;
+        margin:0 1px;
+    }
+
+    button{
+        font-size:14px;
+        padding:10px;
+    }
+
+    #speed{
+        width:180px;
+    }
+}
